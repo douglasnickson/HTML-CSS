@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pesquisa Sebrae</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+
+<div class="container h-100">
+	<div class="row h-100 justify-content-center align-items-center">
+	  	<div class="form-search">
+
+	  		<h4 style="text-align:center;">Bem Vindo a Pesquisa do Sebrae Pombal</h4>
+	  		<h4>Por Favor, Preencha os dados abaixo para continuar.</h4>
+	  		<hr />
+		    <form method="POST" name="cadastrar_informacao" onsubmit="validarCPF(cadastrar_informacao.cpf.value)">
+	            <div class="form-group">
+	                <label for="cpf">CPF:</label>
+	                <input type="text" class="form-control" id="cpf" name="cpf" onKeyPress="MascaraCPF(cadastrar_informacao.cpf)" maxlength="14" placeholder="Digite o seu CPF" required>
+	            </div>    
+				<div class="form-group">
+					<label for="idade">Idade:</label>
+					<input type="text" class="form-control" id="idade" name="idade" placeholder="Digite sua Idade" required>
+				</div>
+				<div class="form-check">
+					<label>
+						<input type="radio" name="radio"> <span class="label-text">Masculino </span>
+					</label>
+					<label>
+						<input type="radio" name="radio"> <span class="label-text">Feminino </span>
+					</label>
+				</div>
+				<br />
+				<button type="submit" class="btn  btn-info" onclick="validarCPF(cadastrar_informacao.cpf.value)">Iniciar Pesquisa</button>
+		    </form>
+
+			<br />
+			
+			<div id="resultado"></div>
+
+			<div class="alert alert-success" role="alert" hidden=true;>
+				Mensagem de Sucesso
+			</div>
+			<div class="alert alert-danger" role="alert" hidden=true;>
+				Mensagem de Erro
+			</div>
+			<div class="alert alert-warning" role="alert" hidden=true;>
+				Mensagem de Alerta
+			</div>
+
+		</div>   
+	</div>  
+</div>
+
+<!-- Scripts do JS -->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.mask.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>

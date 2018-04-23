@@ -1,0 +1,26 @@
+
+.vertical-offset-100{
+    padding-top:80px;
+}
+
+.logo-wifi{
+	margin: 0px 0px 30px 0px;
+	text-align: center;
+}
+
+.help{
+
+}
+
+.error {
+	color: #FF8080;
+	font-size: 9px;
+	text-align: center;
+}
+
+.msg {
+	color: #C1C1C1;
+	font-size: 9px;
+	text-align: center;
+}
+
